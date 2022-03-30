@@ -1,0 +1,45 @@
+const data = {
+  products: [
+    {
+      name: 'Nike slim shirt',
+      slug: 'nike-slim-shirt',
+      image: 'images/p1.jpg',
+      price: 120,
+      countInstock: 20,
+      rate: 4.5,
+      numeReviews: 10,
+      description: 'high quality shirt',
+    },
+    {
+      name: 'adidas slim shirt',
+      slug: 'adidas-slim-shirt',
+      image: 'images/p2.jpg',
+      price: 250,
+      countInstock: 20,
+      rate: 4,
+      numeReviews: 10,
+      description: 'high quality product',
+    },
+    {
+      name: 'Nike slim pant',
+      slug: 'nike-slim-pant',
+      image: 'images/p3.jpg',
+      countInstock: 20,
+      price: 120,
+      rate: 4.5,
+      numeReviews: 10,
+      description: 'high quality shirt',
+    },
+    {
+      name: 'ilsi slim pant',
+      slug: 'ilsi-slim-pant',
+      image: 'images/p4.jpg',
+      countInstock: 23,
+      price: 120,
+      rate: 4.5,
+      numeReviews: 10,
+      description: 'high quality shirt',
+    },
+  ],
+};
+export default data;

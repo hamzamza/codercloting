@@ -13,6 +13,10 @@ body {
 .navbar a {
   font-weight: bold;
 }
-.blue {
-  color: blue;
+.card-light {
+  width: 15rem;
+}
+.card:hover {
+  transform: scale(1.01);
+  transition: 0.1s;
 }

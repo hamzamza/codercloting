@@ -1,3 +1,5 @@
+import data from './data';
+import './index.css';
 function App() {
   return (
     <div>
@@ -5,43 +7,30 @@ function App() {
         <a className="navbar-brand" href="./">
           amazona <label style={{ color: 'yellow' }}>²</label>
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
-              </a>
-            </li>
-          </ul>
-        </div>
       </nav>
-      <main>list product</main>
+      <main className="container">
+        <h1>Featured procucts</h1>
+        <div className="row justifay-content-center">
+          {data.products.map((pd) => (
+            <div className="col-12 col-sm-6 col-md-4  col-lg-3  p-2">
+              <div key={pd.slug} className="card">
+                <img src={pd.image} className={'card-image'}></img>
+                <div className="card-body">
+                  <p>{pd.name}</p>
+                  <p>{pd.price}</p>
+
+                  <a
+                    className={'btn btnylow btn-warning  ps-4 pe-4 '}
+                    href={`/product/${pd.slug}`}
+                  >
+                    Add
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
     </div>
   );
 }
