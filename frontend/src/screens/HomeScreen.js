@@ -11,7 +11,6 @@ function HomeScreen() {
               <div className="card-body">
                 <p>{pd.name}</p>
                 <p>{pd.price}</p>
-
                 <a
                   className={'btn btnylow btn-warning  ps-4 pe-4 '}
                   href={`/product/${pd.slug}`}
